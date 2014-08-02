@@ -1,4 +1,3 @@
 # UNRELEASED
 
-  * initial
-
+  * Customer service (get, create, update, delete])
