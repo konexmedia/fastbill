@@ -19,6 +19,10 @@ var response = require('./response');
 var PORT = 9000;
 var api;
 
+/**
+ * Starts the mocked FastBill API.
+ *
+ */
 exports.start = function start () {
 
     api = mocky(PORT);
@@ -32,7 +36,19 @@ exports.start = function start () {
 
     api.post('/')
         .sent({service: 'customer.get', filter: {CUSTOMER_NUMBER: 'bar'}})
-        .reply(200, response['customer.get-filter']);
+        .reply(200, response['customer.get/filter']);
+        
+    api.post('/')
+        .sent({service: 'customer.get', limit: 1})
+        .reply(200, response['customer.get/limit']);
+};
+
+/**
+ * Destroys the mocked FastBill API.
+ * 
+ */
+exports.destroy = function destroy () {
+    api.destroy();
 };
 
 /**
@@ -50,12 +66,4 @@ exports.manipulateEndpoint = function manipulateEndpoint (fastbill) {
             fastbill[service].$uri = 'http://localhost:' + PORT;
         }
     }
-};
-
-/**
- * Destroys the mocked API.
- * 
- */
-exports.destroy = function destroy () {
-    api.destroy();
 };

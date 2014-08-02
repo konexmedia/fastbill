@@ -14,6 +14,7 @@
 'use strict';
 
 module.exports = {
-    'customer.get': require('./customer.get.json'),
-    'customer.get-filter': require('./customer.get-filter.json')
+    'customer.get': require('./customer.get/all.json'),
+    'customer.get/filter': require('./customer.get/filter.json'),
+    'customer.get/limit': require('./customer.get/limit.json')
 };
