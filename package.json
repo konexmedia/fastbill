@@ -1,0 +1,25 @@
+{
+  "name": "fastbill",
+  "version": "0.1.0",
+  "description": "Client for communicating with the FastBill API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:konexmedia/fastbill.git"
+  },
+  "keywords": [
+    "fastbill",
+    "api",
+    "client",
+    "abstraction"
+  ],
+  "author": "konexmedia <info@konexmedia.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/konexmedia/fastbill/issues"
+  },
+  "homepage": "https://github.com/konexmedia/fastbill"
+}
