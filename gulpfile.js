@@ -16,12 +16,13 @@
 var path = require('path');
 
 var gulp = require('gulp');
+var jasmine = require('gulp-jasmine');
 var jshint = require('gulp-jshint');
 var sequence = require('run-sequence');
 var paths = {};
 
-paths.specs = [path.join(__dirname, 'specs')];
-paths.sources = [path.join(__dirname, '*.js'), path.join(__dirname, 'lib')];
+paths.specs = [path.join(__dirname, 'specs', '*.spec.js')];
+paths.sources = [path.join(__dirname, '*.js'), path.join(__dirname, 'lib', '**', '*.js')];
 
 gulp.task('lint', function () {
     return gulp.src(paths.specs.concat(paths.sources))
@@ -29,6 +30,11 @@ gulp.task('lint', function () {
         .pipe(jshint.reporter());
 });
 
+gulp.task('test', function () {
+    return gulp.src(paths.specs)
+        .pipe(jasmine());
+});
+
 gulp.task('default', function () {
-    return sequence('lint');
+    return sequence('lint', 'test');
 });
