@@ -36,4 +36,11 @@ describe('The "FastBill" communication object', function () {
             expect(e).toBeDefined();
         }
     });
+    
+    it('should have a "Customer" broker', function () {
+        var fastbill = FastBill.instantiate(credentials);
+
+        expect(fastbill.customer).toBeDefined();
+        expect(fastbill.customer.constructor.name).toBe('CustomerBroker');
+    });
 });
