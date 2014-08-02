@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/konexmedia/fastbill/issues"
   },
-  "homepage": "https://github.com/konexmedia/fastbill"
+  "homepage": "https://github.com/konexmedia/fastbill",
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-jshint": "^1.8.3",
+    "run-sequence": "^0.3.6"
+  }
 }
