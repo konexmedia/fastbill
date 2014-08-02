@@ -23,9 +23,12 @@
   },
   "homepage": "https://github.com/konexmedia/fastbill",
   "devDependencies": {
+    "body-parser": "^1.5.2",
+    "express": "^4.7.2",
     "gulp": "^3.8.7",
     "gulp-jasmine": "^0.3.0",
     "gulp-jshint": "^1.8.3",
-    "run-sequence": "^0.3.6"
+    "run-sequence": "^0.3.6",
+    "server-destroy": "^1.0.0"
   }
 }
