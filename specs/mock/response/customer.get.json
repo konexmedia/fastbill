@@ -1,0 +1,12 @@
+{
+    "RESPONSE": {
+        "CUSTOMERS": [
+            {
+                "CUSTOMER_NUMBER": "foo"
+            },
+            {
+                "CUSTOMER_NUMBER": "bar"
+            }
+        ]
+    }
+}
