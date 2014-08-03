@@ -1,9 +1,6 @@
 # UNRELEASED
 
-  * Support for customer.delete
-  * Support for customer.update
-  * Support for customer.create
-  * Support for customer.get
+  * Support for all `customer` services (`get`, `create`, `update`, `delete`).
 
 # 0.1.0 (2014-07-31)
 
