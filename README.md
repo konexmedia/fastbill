@@ -1,4 +1,4 @@
-# fastbill
+# fastbill [![Build Status](https://travis-ci.org/konexmedia/fastbill.svg?branch=master)](https://travis-ci.org/konexmedia/fastbill)
 
 A client implementation for communicating with the [FastBill](http://fastbill.com) [API](http://www.fastbill.com/api).
 
