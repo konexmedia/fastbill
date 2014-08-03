@@ -1,4 +1,5 @@
 specs
 .jshintrc
 .travis.yml
+.zedstate
 gulpfile.js
