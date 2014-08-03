@@ -27,16 +27,16 @@ You will have access to the API services after instantiating the communication o
 
 FastBill provides several services for interacting with the data in your account. This module provides a clean abstraction from interacting with the API in a raw fashion. The following part describes how to use the different parts of this client.
 
- - [Customer](#Customer)
+ - [Customer](#customer)
 
 ### Customer
 
 Methods for accessing, creating, updating and deleting your customers.
 
- - [get](#get(options, callback))
- - [create](#create(customer, callback))
- - [update](#update(id, modification, callback))
- - [delete]()
+ - [get](#getoptions-callback)
+ - [create](#createcustomer-callback)
+ - [update](#updateid-modification-callback)
+ - [delete](#deleteid-callback)
 
 #### get(options, callback)
 
