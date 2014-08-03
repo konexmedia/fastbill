@@ -54,6 +54,12 @@ exports.start = function start () {
             CUSTOMER_ID: 1
         }})
         .reply(200, response['customer.update']);
+
+    api.post('/')
+        .sent({service: 'customer.delete', data: {
+              CUSTOMER_ID: 1
+        }})
+        .reply(200, response['customer.delete']);
 };
 
 /**

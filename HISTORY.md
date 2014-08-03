@@ -1,5 +1,6 @@
 # UNRELEASED
 
+  * Support for customer.delete
   * Support for customer.update
   * Support for customer.create
   * Support for customer.get

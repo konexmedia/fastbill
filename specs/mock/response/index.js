@@ -18,5 +18,6 @@ module.exports = {
     'customer.get/filter': require('./customer.get/filter.json'),
     'customer.get/limit': require('./customer.get/limit.json'),
     'customer.create': require('./customer.create.json'),
-    'customer.update': require('./customer.update.json')
+    'customer.update': require('./customer.update.json'),
+    'customer.delete': require('./customer.delete.json')
 };
