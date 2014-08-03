@@ -1,3 +1,4 @@
 # UNRELEASED
 
-  * Customer service (get, create, update, delete])
+  * Support for customer.create
+  * Support for customer.get
