@@ -106,4 +106,12 @@ describe('The "CustomerBroker"', function () {
             done();
         });
     });
+
+    it('custom.delete: should be able to delete an existing customer', function (done) {
+        fastbill.customer.delete(1, function (err) {
+            expect(err).toBeNull();
+
+            done();
+        });
+    });
 });

@@ -1,7 +1,7 @@
 {
   "name": "fastbill",
   "version": "0.2.0",
-  "description": "Client for communicating with the FastBill API.",
+  "description": "A client implementation for communicating with the FastBill API.",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
