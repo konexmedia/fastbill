@@ -47,6 +47,13 @@ exports.start = function start () {
             CUSTOMER_TYPE: 'consumer', LAST_NAME: 'König'
         }})
         .reply(200, response['customer.create']);
+
+    api.post('/')
+        .sent({service: 'customer.update', data: {
+            FIRST_NAME: 'André',
+            CUSTOMER_ID: 1
+        }})
+        .reply(200, response['customer.update']);
 };
 
 /**

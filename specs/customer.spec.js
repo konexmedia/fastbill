@@ -86,4 +86,24 @@ describe('The "CustomerBroker"', function () {
            done();
        });
     });
+    
+    it('custom.update: should throw an error if not all params has been passed', function () {
+        try {
+            fastbill.customer.update();
+        } catch (e) {
+            expect(e).toBeDefined();
+        }
+    });
+    
+    it('custom.update: should be able to update an existing customer', function (done) {
+        var modification = {
+            FIRST_NAME: 'André'
+        };
+        
+        fastbill.customer.update(1, modification, function (err) {
+            expect(err).toBeNull();
+
+            done();
+        });
+    });
 });
