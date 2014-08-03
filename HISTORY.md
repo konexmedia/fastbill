@@ -1,4 +1,4 @@
-# UNRELEASED
+# 0.2.0 (2014-08-03)
 
   * Support for all `customer` services (`get`, `create`, `update`, `delete`).
 
