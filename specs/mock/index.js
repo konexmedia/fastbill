@@ -41,6 +41,12 @@ exports.start = function start () {
     api.post('/')
         .sent({service: 'customer.get', limit: 1})
         .reply(200, response['customer.get/limit']);
+        
+    api.post('/')
+        .sent({service: 'customer.create', data: {
+            CUSTOMER_TYPE: 'consumer', LAST_NAME: 'König'
+        }})
+        .reply(200, response['customer.create']);
 };
 
 /**

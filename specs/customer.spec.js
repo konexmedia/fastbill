@@ -70,4 +70,20 @@ describe('The "CustomerBroker"', function () {
             done();
         });
     });
+    
+    it('custom.create: should be able to create a new customer', function (done) {
+       var customer = {
+           CUSTOMER_TYPE: 'consumer',
+           LAST_NAME: 'König'
+       };
+       
+       fastbill.customer.create(customer, function (err, id) {
+           expect(err).toBeNull();
+
+           expect(id).toBeDefined();
+           expect(id).toBe(1);
+
+           done();
+       });
+    });
 });

@@ -16,5 +16,6 @@
 module.exports = {
     'customer.get': require('./customer.get/all.json'),
     'customer.get/filter': require('./customer.get/filter.json'),
-    'customer.get/limit': require('./customer.get/limit.json')
+    'customer.get/limit': require('./customer.get/limit.json'),
+    'customer.create': require('./customer.create.json')
 };
