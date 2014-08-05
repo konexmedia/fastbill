@@ -4,6 +4,7 @@
   "description": "A client implementation for communicating with the FastBill API.",
   "main": "index.js",
   "scripts": {
+    "build": "gulp",
     "test": "gulp test"
   },
   "repository": {
@@ -24,11 +25,13 @@
   "homepage": "https://github.com/konexmedia/fastbill",
   "devDependencies": {
     "body-parser": "^1.5.2",
+    "browserify": "^5.9.1",
     "express": "^4.7.2",
     "gulp": "^3.8.7",
     "gulp-jasmine": "^0.3.0",
     "gulp-jshint": "^1.8.3",
     "run-sequence": "^0.3.6",
-    "server-destroy": "^1.0.0"
+    "server-destroy": "^1.0.0",
+    "vinyl-source-stream": "^0.1.1"
   }
 }

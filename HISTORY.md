@@ -1,3 +1,7 @@
+# UNRELEASED
+
+  * Browser support: The API abstraction can be used within the browser now.
+
 # 0.2.1 (2014-08-03)
 
   * Removed .zedstate file

@@ -15,10 +15,13 @@
 
 var path = require('path');
 
+var browserify = require('browserify');
 var gulp = require('gulp');
 var jasmine = require('gulp-jasmine');
 var jshint = require('gulp-jshint');
 var sequence = require('run-sequence');
+var source = require('vinyl-source-stream');
+var pkg = require('./package.json');
 var paths = {};
 
 paths.specs = [path.join(__dirname, 'specs', '*.spec.js')];
@@ -35,6 +38,16 @@ gulp.task('test', function () {
         .pipe(jasmine());
 });
 
+gulp.task('browserify', function () {
+    return browserify({
+        entries: './index.js',
+        standalone: 'FastBill'
+    })
+        .bundle()
+        .pipe(source(pkg.name + '-' + pkg.version + '.js'))
+        .pipe(gulp.dest('./browser/'));
+});
+
 gulp.task('default', function () {
-    return sequence('lint', 'test');
+    return sequence('lint', 'test', 'browserify');
 });
