@@ -44,7 +44,7 @@ gulp.task('browserify', function () {
         standalone: 'FastBill'
     })
         .bundle()
-        .pipe(source(pkg.name + '-' + pkg.version + '.js'))
+        .pipe(source(pkg.name + '-' + '.js'))
         .pipe(gulp.dest('./browser/'));
 });
 
