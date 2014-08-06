@@ -27,6 +27,32 @@ describe('The "CustomerBroker"', function () {
     beforeEach(mock.start.bind(mock));
     afterEach(mock.destroy.bind(mock));
 
+    it('custom.get: Should handle wrong arguments', function () {
+        try {
+            fastbill.customer.get();
+        } catch (e) {
+            expect(e).toBeDefined();
+        }
+
+        try {
+            fastbill.customer.get(0, function () {});
+        } catch (e) {
+            expect(e).toBeDefined();
+        }
+
+        try {
+            fastbill.customer.get({});
+        } catch (e) {
+            expect(e).toBeDefined();
+        }
+        
+        try {
+            fastbill.customer.get([], function () {})
+        } catch (e) {
+            expect(e).toBeDefined();
+        }
+    });
+
     it('custom.get: should be able to get all customers', function (done) {
         fastbill.customer.get(function (err, customers) {
             expect(err).toBeNull();
