@@ -47,7 +47,7 @@ describe('The "CustomerBroker"', function () {
         }
         
         try {
-            fastbill.customer.get([], function () {})
+            fastbill.customer.get([], function () {});
         } catch (e) {
             expect(e).toBeDefined();
         }
