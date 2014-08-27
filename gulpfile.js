@@ -37,7 +37,6 @@ gulp.task('lint', function () {
         .pipe(jshint.reporter('fail'));
 });
 
-
 gulp.task('test', function () {
     return gulp.src(paths.specs)
         .pipe(jasmine());
