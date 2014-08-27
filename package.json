@@ -30,8 +30,7 @@
     "gulp": "^3.8.7",
     "gulp-jasmine": "^0.3.0",
     "gulp-jshint": "^1.8.3",
-    "gulp-rename": "^1.2.0",
-    "gulp-symlink": "^1.1.0",
+    "gulp-sym": "0.0.13",
     "run-sequence": "^0.3.6",
     "server-destroy": "^1.0.0"
   },

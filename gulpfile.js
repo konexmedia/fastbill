@@ -18,8 +18,7 @@ var path = require('path');
 var gulp = require('gulp');
 var jasmine = require('gulp-jasmine');
 var jshint = require('gulp-jshint');
-var symlink = require('gulp-symlink');
-var rename = require('gulp-rename');
+var symlink = require('gulp-sym');
 var sequence = require('run-sequence');
 var paths = {};
 
@@ -28,8 +27,7 @@ paths.sources = [path.join(__dirname, '*.js'), path.join(__dirname, 'lib', '**',
 
 gulp.task('hook', function () {
     return gulp.src('.pre-commit')
-        .pipe(rename('pre-commit'))
-        .pipe(symlink('.git/hooks/'));    
+        .pipe(symlink('.git/hooks/pre-commit'));
 });
 
 gulp.task('lint', function () {
