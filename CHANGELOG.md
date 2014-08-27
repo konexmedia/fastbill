@@ -1,7 +1,6 @@
 # UNRELEASED
 
   * Parameter checking: Using new module for checking parameters up front.
-  * Browser support: The API abstraction can be used within the browser now.
 
 # 0.2.1 (2014-08-03)
 
