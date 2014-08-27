@@ -33,8 +33,10 @@ gulp.task('hook', function () {
 gulp.task('lint', function () {
     return gulp.src(paths.specs.concat(paths.sources))
         .pipe(jshint())
-        .pipe(jshint.reporter());
+        .pipe(jshint.reporter('jshint-stylish'))
+        .pipe(jshint.reporter('fail'));
 });
+
 
 gulp.task('test', function () {
     return gulp.src(paths.specs)
